@@ -23,7 +23,14 @@ STL Hands-On boilerplate project
     * (CTRL+SHIFT+B) and you are done
     * ========== Build All: 1 succeeded, 0 failed, 0 skipped ==========
 -----
-# Github.com (Fork)
-Use Fork to create your own copy of the aplication (that you will extend throughout the sessions)
+# Homework
+After each session, commit your own work based on the boilerplate
+
+* Step 0: Create your personal account in github.com
+* Step 1: Github - Fork: Access the oficial repo and use **Fork** to create your own copy of the solution. 
+* Step 2: Clone **your own fork repository** in Visual studio. 
+From your fork repo, click the "Code" button and copy the HTTPS URL.
+* Step 3: Commit/push your changes. 
+More details on how to work with forks in Visual studio can be fond here: https://doc.fireflymigration.com/working-with-github-fork-in-visual-studio.html
 
 ![image](https://github.com/PCA-NetRom/STL-hands-on/assets/81954334/36098523-7405-454d-8395-f0939c882092)
