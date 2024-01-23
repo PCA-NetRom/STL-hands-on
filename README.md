@@ -20,7 +20,7 @@ STL Hands-On boilerplate project
 ## 3. Open solution/project
     * Start-up project for the application (e.g. boilerplate): HandsOn - STL.sln
 ## 4. Build solution
-    * (STRL+SHIFT+B) and you are done
+    * (CTRL+SHIFT+B) and you are done
     * ========== Build All: 1 succeeded, 0 failed, 0 skipped ==========
 -----
 # Github.com (Fork)
