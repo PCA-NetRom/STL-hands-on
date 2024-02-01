@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <functional>
+
+using namespace std;
+
+int main() {
+    vector<pair<int, int>> ids = {
+        {1920512, 4},
+        {7612341, 1},
+        {9182852, 2},
+        {8172341, 5},
+        {1086754, 3}
+    };
+
+    sort(ids.begin(), ids.end(), [](const auto& a, const auto& b) {
+        return a.second == b.second ? a.first < b.first : a.second > b.second;
+    });
+
+    for (const auto& [id, place] : ids) {
+        cout << id << " with place " << place << std::endl;
+    }
+
+    auto it = upper_bound(ids.begin(), ids.end(), make_pair(0, 5),
+                      [](const auto& a, const auto& b) {
+                          return less<int>()(b.second, a.second);
+                      });
+
+    if (it != ids.end()) {
+        cout << "\nId \"" << it->first << "\" with place " << it->second << " is the last accepted." << endl;
+    } else {
+        cout << "\nNo id is declined." << endl;
+    }
+
+    return 0;
+}

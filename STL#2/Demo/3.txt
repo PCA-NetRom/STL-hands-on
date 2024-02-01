@@ -1,0 +1,42 @@
+#include <iostream>
+#include <queue>
+#include <string>
+
+using namespace std;
+
+struct Task {
+    int priority;
+    string description;
+
+    bool operator<(const Task& other) const {
+        return priority < other.priority;
+    }
+};
+
+priority_queue<Task> taskQueue;
+
+void addTask(int priority, const string& description) {
+    Task task = {priority, description};
+    taskQueue.push(task);
+}
+
+void executeHighestPriorityTask() {
+    if (!taskQueue.empty()) {
+        Task task = taskQueue.top();
+        taskQueue.pop();
+        cout << task.description << " with priority: " << task.priority << '\n';
+    } else {
+        cout << "No tasks available!" << '\n';
+    }
+}
+
+int main() {
+    addTask(5, "Fix bug");
+    addTask(3, "Implement feature");
+    addTask(10, "Clean-up database");
+    
+    executeHighestPriorityTask();
+    executeHighestPriorityTask();
+    
+    return 0;
+}

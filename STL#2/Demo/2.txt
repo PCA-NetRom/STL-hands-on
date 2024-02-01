@@ -1,0 +1,37 @@
+#include <iostream>
+#include <stack>
+#include <string>
+
+using namespace std;
+
+string currentText;
+stack<string> history;
+
+void write(const string& text) {
+    history.push(currentText);
+    currentText += text;
+}
+
+void undo() {
+    if(!history.empty()) {
+        currentText = history.top();
+        history.pop();
+    }
+}
+
+string read() {
+    return currentText;
+}
+
+int main() {
+    write("Hello");
+    cout << read() << '\n';
+
+    write(" World");
+    cout << read() << '\n';
+
+    undo();
+    cout << read() << '\n';
+
+    return 0;
+}
